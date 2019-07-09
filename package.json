@@ -1,0 +1,19 @@
+{
+  "name": "lemon",
+  "version": "0.0.0",
+  "description": "Lemon Learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samjhawkins/lemon.git"
+  },
+  "author": "Sam Hawkins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samjhawkins/lemon/issues"
+  },
+  "homepage": "https://github.com/samjhawkins/lemon#readme"
+}
