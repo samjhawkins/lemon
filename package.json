@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/samjhawkins/lemon#readme",
   "dependencies": {
+    "@material-ui/core": "^4.2.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "react": "^16.8.6",
