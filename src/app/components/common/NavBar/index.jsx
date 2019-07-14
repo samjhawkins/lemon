@@ -4,6 +4,7 @@ import {
     Toolbar,
     IconButton,
     Typography,
+    Container
 } from '@material-ui/core/index';
 import {Menu as MenuIcon} from '@material-ui/icons/index';
 import ProfileMenu from "./ProfileMenu";
@@ -23,31 +24,29 @@ export default class NavBar extends Component {
         this.setState({open: !this.state.open});
     }
 
-    handleClose(){
+    handleClose() {
         this.setState({open: false});
     }
 
     render() {
 
         return (
-            <div>
-                <AppBar position='static'>
-                    <Toolbar>
-                        <IconButton edge='start' color='inherit' aria-label='Menu' href={'/'}>
-                            <MenuIcon/>
-                        </IconButton>
-                        <Typography variant='h6'>
-                            Lemon
-                        </Typography>
-                        <ProfileMenu
-                            open={this.state.open}
-                            auth={this.state.auth}
-                            handleClose={this.handleClose}
-                            handleToggle={this.handleToggle}
-                        />
-                    </Toolbar>
-                </AppBar>
-            </div>
+            <AppBar position='fixed'>
+                <Toolbar style={{justifyContent: "space-between"}}>
+                    <IconButton edge='start' color='inherit' aria-label='Menu' href={'/'}>
+                        <MenuIcon/>
+                    </IconButton>
+                    <Typography variant='h6'>
+                        Lemon
+                    </Typography>
+                    <ProfileMenu
+                        open={this.state.open}
+                        auth={this.state.auth}
+                        handleClose={this.handleClose}
+                        handleToggle={this.handleToggle}
+                    />
+                </Toolbar>
+            </AppBar>
         );
     }
 }

@@ -40,7 +40,18 @@ module.exports = env => {
                         ]
                     },
                     {
-                        test: /\.(ttf|eot|woff|woff2|jpe?g|png|gif|svg)$/,
+                        test: /\.(jpe?g|png|gif|svg)$/,
+                        use: [
+                            {
+                                loader: "file-loader",
+                                options: {
+                                    name: "images/[name].[ext]",
+                                },
+                            }
+                        ]
+                    },
+                    {
+                        test: /\.(ttf|eot|woff|woff2)$/,
                         use: [
                             {
                                 loader: "file-loader",
