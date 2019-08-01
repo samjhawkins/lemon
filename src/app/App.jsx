@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
-import NavBar from "./components/common/NavBar";
+import NavBar from "./components/common/NavBar/NavBar";
 import {Grid} from "@material-ui/core";
 
 export default class App extends Component {
