@@ -11,15 +11,11 @@ import {
 } from "@material-ui/core";
 import {KeyboardArrowLeft, KeyboardArrowRight} from '@material-ui/icons';
 
-import earth from '../../../images/earth.png';
-import monastery from '../../../images/monastery.png';
-import sunsetSpin from '../../../images/sunsetSpin.png';
-import walkway from '../../../images/walkway.png';
+import monastery from '../../../../images/monastery.png';
+import sunsetSpin from '../../../../images/sunsetSpin.png';
+import walkway from '../../../../images/walkway.png';
 
 const tutorialSteps = [{
-    label: 'Earth',
-    imgPath: earth
-}, {
     label: 'Monastery',
     imgPath: monastery
 }, {

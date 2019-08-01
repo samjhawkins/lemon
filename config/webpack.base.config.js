@@ -7,7 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
-const APP_DIR = path.resolve(__dirname, '../src/app');
+const APP_DIR = path.resolve(__dirname, '../src');
 
 module.exports = env => {
     const { PLATFORM, VERSION } = env;
@@ -72,7 +72,7 @@ module.exports = env => {
             plugins: [
                 new FriendlyErrorsWebpackPlugin(),
                 new HtmlWebpackPlugin({
-                    template: './src/app/html/index.html',
+                    template: './src/html/index.html',
                     filename: './index.html'
                 }),
                 new webpack.DefinePlugin({
