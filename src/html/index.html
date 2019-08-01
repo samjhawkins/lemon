@@ -1,20 +1,103 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
     <base href="/">
     <title>Sample App</title>
-    <link rel="shortcut icon" href="#" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="shortcut icon" href="#"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #app {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #waitText {
+            margin: auto;
+            width: 50vw;
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #loaderSpinner {
+            position: relative;
+            top: 10%;
+            margin: auto;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: lightgray;
+        }
+
+        .rotateBox {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            transform: rotate(calc(var(--n) * 22.5deg));
+        }
+
+        .spinnerDot {
+            border-radius: 50%;
+            background-color: grey;
+            width: 20px;
+            height: 20px;
+            animation: oscillate 4s ease-in-out infinite;
+            animation-delay: calc(var(--n) * 0.25s);
+            position: relative;
+            left: 120px;
+        }
+
+        @keyframes oscillate {
+            0%, 100% {
+                top: 0;
+            }
+            50% {
+                top: 230px;
+            }
+        }
+    </style>
 </head>
 <body>
 <div id="app">
     <!-- loader starts -->
-    <section class="app-intro">
-        <h1 class="heading">INITIALIZING</h1>
-        <p class="sub-heading">bear with us ...</p>
-    </section>
+    <h2 id="waitText">Site is loading, please wait...</h2>
+    <div id="loaderSpinner">
+        <div class="rotateBox" style="--n: 0">
+            <div class="spinnerDot" style="--n: 0"></div>
+        </div>
+        <div class="rotateBox" style="--n: 1">
+            <div class="spinnerDot" style="--n: 1"></div>
+        </div>
+        <div class="rotateBox" style="--n: 2">
+            <div class="spinnerDot" style="--n: 2"></div>
+        </div>
+        <div class="rotateBox" style="--n: 3">
+            <div class="spinnerDot" style="--n: 3"></div>
+        </div>
+        <div class="rotateBox" style="--n: 4">
+            <div class="spinnerDot" style="--n: 4"></div>
+        </div>
+        <div class="rotateBox" style="--n: 5">
+            <div class="spinnerDot" style="--n: 5"></div>
+        </div>
+        <div class="rotateBox" style="--n: 6">
+            <div class="spinnerDot" style="--n: 6"></div>
+        </div>
+        <div class="rotateBox" style="--n: 7">
+            <div class="spinnerDot" style="--n: 7"></div>
+        </div>
+    </div>
     <!-- loader ends -->
 </div>
 </body>

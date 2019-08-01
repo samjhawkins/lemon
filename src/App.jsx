@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Home from './app/components/Home';
+import Home from './app/components/Home/Home';
 import About from './app/components/About';
 import NavBar from "./app/components/common/NavBar/NavBar";
 import {Grid} from "@material-ui/core/index";

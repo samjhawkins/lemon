@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import DisplayStepper from './common/DisplayStepper/DisplayStepper'
+import WelcomeCard from "./WelcomeCard";
 
 export default class Home extends Component {
     render() {
         return (
             <div>
-                <DisplayStepper />
+                <WelcomeCard />
             </div>
         )
     }
