@@ -21,49 +21,53 @@
         }
 
         #waitText {
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            line-height: 1;
+            letter-spacing: -0.00833em;
+
             margin: auto;
-            width: 50vw;
-            height: 10vh;
+            width: 100%;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-
         }
 
         #loaderSpinner {
+            width: 300px;
+            height: 300px;
+
             position: relative;
             top: 10%;
             margin: auto;
-            width: 250px;
-            height: 250px;
             border-radius: 50%;
             background-color: lightgray;
         }
 
         .rotateBox {
             position: absolute;
-            width: 250px;
-            height: 250px;
+            width: 100%;
+            height: 100%;
             transform: rotate(calc(var(--n) * 22.5deg));
         }
 
         .spinnerDot {
             border-radius: 50%;
-            background-color: grey;
-            width: 20px;
-            height: 20px;
-            animation: oscillate 4s ease-in-out infinite;
-            animation-delay: calc(var(--n) * 0.25s);
+            background-color: #3f51b5;
+            width: 10%;
+            height: 10%;
+            animation: oscillate 2s ease-in infinite;
+            animation-delay: calc(var(--n) * 0.125s - 2s);
             position: relative;
-            left: 120px;
+            left: -10%;
         }
 
         @keyframes oscillate {
             0%, 100% {
-                top: 0;
+                top: 15%;
             }
             50% {
-                top: 230px;
+                top: 75%;
             }
         }
     </style>
@@ -71,7 +75,6 @@
 <body>
 <div id="app">
     <!-- loader starts -->
-    <h2 id="waitText">Site is loading, please wait...</h2>
     <div id="loaderSpinner">
         <div class="rotateBox" style="--n: 0">
             <div class="spinnerDot" style="--n: 0"></div>
@@ -97,6 +100,31 @@
         <div class="rotateBox" style="--n: 7">
             <div class="spinnerDot" style="--n: 7"></div>
         </div>
+        <div class="rotateBox" style="--n: 8">
+            <div class="spinnerDot" style="--n: 8"></div>
+        </div>
+        <div class="rotateBox" style="--n: 9">
+            <div class="spinnerDot" style="--n: 9"></div>
+        </div>
+        <div class="rotateBox" style="--n: 10">
+            <div class="spinnerDot" style="--n: 10"></div>
+        </div>
+        <div class="rotateBox" style="--n: 11">
+            <div class="spinnerDot" style="--n: 11"></div>
+        </div>
+        <div class="rotateBox" style="--n: 12">
+            <div class="spinnerDot" style="--n: 12"></div>
+        </div>
+        <div class="rotateBox" style="--n: 13">
+            <div class="spinnerDot" style="--n: 13"></div>
+        </div>
+        <div class="rotateBox" style="--n: 14">
+            <div class="spinnerDot" style="--n: 14"></div>
+        </div>
+        <div class="rotateBox" style="--n: 15">
+            <div class="spinnerDot" style="--n: 15"></div>
+        </div>
+        <h2 id="waitText">Site is loading, please wait...</h2>
     </div>
     <!-- loader ends -->
 </div>
