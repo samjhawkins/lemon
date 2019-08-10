@@ -7,7 +7,7 @@ import {
 } from '@material-ui/core/index';
 import {Menu as MenuIcon} from '@material-ui/icons/index';
 import ProfileMenu from "./ProfileMenu";
-import Grid from "@material-ui/core/Grid";
+import Grid from "@material-ui/core/Grid/index";
 
 export default class NavBar extends Component {
     constructor(props) {
@@ -34,7 +34,7 @@ export default class NavBar extends Component {
             <AppBar position='fixed'>
                 <Toolbar>
                     <Grid justify={"space-between"} container>
-                        <Grid item>
+                        <Grid item container xs={12} sm={3}>
                             <IconButton edge='start' color='inherit' aria-label='Menu'>
                                 <MenuIcon/>
                             </IconButton>
@@ -42,7 +42,7 @@ export default class NavBar extends Component {
                                 Lemon
                             </Typography>
                         </Grid>
-                        <Grid item>
+                        <Grid item container xs={12} sm={1}>
                             <ProfileMenu
                                 open={this.state.open}
                                 auth={this.state.auth}

@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Home from './app/components/Home/Home';
-import About from './app/components/About';
-import NavBar from "./app/components/common/NavBar/NavBar";
-import {Grid} from "@material-ui/core/index";
+import {BrowserRouter as Router, Switch} from 'react-router-dom';
+import NavBar from './components/common/NavBar/NavBar';
+import {Grid} from '@material-ui/core/index';
+import renderRoutes from './routes/renderRoutes'
 
 export default class App extends Component {
     render() {
+        const auth = true;
         return (
             <Router>
                 <Grid
@@ -21,9 +21,7 @@ export default class App extends Component {
                     </Grid>
                     <Grid item xs={12}>
                         <Switch>
-                            <Route exact path="/" component={Home}/>
-                            <Route path="/about" component={About}/>
-                            <Route render={() => <h1>Page not found</h1>}/>
+                            {renderRoutes(auth)}
                         </Switch>
                     </Grid>
                 </Grid>

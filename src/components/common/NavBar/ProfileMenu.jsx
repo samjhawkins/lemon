@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {Button, ClickAwayListener, Grow, MenuItem, MenuList, Paper, Popper} from "@material-ui/core";
-import {PermIdentity as PermIdentityIcon} from "@material-ui/icons";
+import {Button, ClickAwayListener, Grow, MenuItem, MenuList, Paper, Popper} from "@material-ui/core/index";
+import {PermIdentity as PermIdentityIcon} from "@material-ui/icons/index";
 
 export default class ProfileMenu extends Component{
     constructor(props) {

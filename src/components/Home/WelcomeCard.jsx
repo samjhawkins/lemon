@@ -1,7 +1,9 @@
 import React from 'react';
 import {
     Card, CardActions, CardContent, Typography, Button
-} from "@material-ui/core";
+} from "@material-ui/core/index";
+import {Link} from 'react-router-dom';
+import LinkedButton from "../common/LinkedButton/LinkedButton";
 
 export default class WelcomeCard extends React.Component {
     render() {
@@ -17,12 +19,17 @@ export default class WelcomeCard extends React.Component {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="large" variant="contained" color="primary">
-                        Learn About Sam
-                    </Button>
-                    <Button size="large" variant="contained">
-                        Explore Site
-                    </Button>
+                    <LinkedButton
+                        to={"/about"}
+                        size={"large"}
+                        text={"Learn About Sam"}
+                        colour={"primary"}
+                    />
+                    <LinkedButton
+                        to={"/"}
+                        size={"large"}
+                        text={"Explore Site"}
+                    />
                 </CardActions>
             </Card>
         );

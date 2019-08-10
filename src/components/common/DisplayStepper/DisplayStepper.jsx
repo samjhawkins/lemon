@@ -8,12 +8,12 @@ import {
     CardMedia,
     CardContent,
     Typography
-} from "@material-ui/core";
-import {KeyboardArrowLeft, KeyboardArrowRight} from '@material-ui/icons';
+} from "@material-ui/core/index";
+import {KeyboardArrowLeft, KeyboardArrowRight} from '@material-ui/icons/index';
 
-import monastery from '../../../../images/monastery.png';
-import sunsetSpin from '../../../../images/sunsetSpin.png';
-import walkway from '../../../../images/walkway.png';
+import monastery from '../../../images/monastery.png';
+import sunsetSpin from '../../../images/sunsetSpin.png';
+import walkway from '../../../images/walkway.png';
 
 const tutorialSteps = [{
     label: 'Monastery',
