@@ -33,16 +33,20 @@ export default class NavBar extends Component {
         return (
             <AppBar position='fixed'>
                 <Toolbar>
-                    <Grid justify={"space-between"} container>
-                        <Grid item container xs={12} sm={3}>
+                    <Grid justify={"space-between"} container >
+                        <Grid item container sm={3} alignContent={"center"} justify={"center"}>
                             <IconButton edge='start' color='inherit' aria-label='Menu'>
                                 <MenuIcon/>
                             </IconButton>
-                            <Typography variant='h6' display={'inline'}>
+                            <Typography
+                                variant='h6'
+                                display={'inline'}
+                                style={{alignSelf: "center"}}
+                            >
                                 Lemon
                             </Typography>
                         </Grid>
-                        <Grid item container xs={12} sm={1}>
+                        <Grid item container xs={12} sm={1} justify={"center"}>
                             <ProfileMenu
                                 open={this.state.open}
                                 auth={this.state.auth}
