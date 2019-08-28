@@ -1,4 +1,5 @@
 import SignIn from "../components/Account/SignIn/SignIn";
+import PasswordReset from "../components/Account/PasswordReset/PasswordReset";
 import Register from "../components/Account/Register/Register";
 import Home from "../components/Home/Home";
 import About from "../components/About";
@@ -29,6 +30,10 @@ export const unAuthRoutesConfig = [{
     path: "/register",
     exact: true,
     component: Register
+}, {
+    path: "/passwordReset",
+    exact: true,
+    component: PasswordReset
 }, {
     path: "/(signIn)?",
     exact: true,
