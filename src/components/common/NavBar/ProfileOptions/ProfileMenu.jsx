@@ -1,19 +1,31 @@
-import React, {Component} from 'react';
-import {MenuList, MenuItem, Typography} from "@material-ui/core";
+import React from 'react';
+import {MenuList, MenuItem, Typography, Paper} from "@material-ui/core";
 import UndecoratedLink from "../../UndecoratedLink/UndecoratedLink";
+import {makeStyles} from '@material-ui/styles';
 
-export default class ProfileMenu extends Component {
-    render() {
-        return (
+const useStyles = makeStyles(theme => ({
+    root: {
+        width: '100%',
+        margin: theme.spacing(4)
+    },
+    item: {
+        backgroundColor: theme.color.white,
+    },
+}));
+
+export const ProfileMenu = (props, ref) => {
+    const classes = useStyles();
+    return (
+        <Paper ref={ref} className={classes.root}>
             <MenuList>
-                <MenuItem onClick={this.props.handleClose}>
+                <MenuItem onClick={props.handleClose} className={classes.item}>
                     <UndecoratedLink to={"/myAccount"}>
                         <Typography color={"primary"}>
                             My Account
                         </Typography>
                     </UndecoratedLink>
                 </MenuItem>
-                <MenuItem onClick={this.props.handleClose}>
+                <MenuItem onClick={props.handleClose} className={classes.item}>
                     <UndecoratedLink to={"/signOut"}>
                         <Typography color={"secondary"}>
                             Sign Out
@@ -21,6 +33,8 @@ export default class ProfileMenu extends Component {
                     </UndecoratedLink>
                 </MenuItem>
             </MenuList>
-        )
-    }
-}
+        </Paper>
+    );
+};
+
+export default React.forwardRef(ProfileMenu);

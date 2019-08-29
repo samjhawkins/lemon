@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, ClickAwayListener, Grow, MenuItem, MenuList, Paper, Popper} from "@material-ui/core/index";
+import {Button, ClickAwayListener, Grow, Paper, Popper} from "@material-ui/core/index";
 import {PermIdentity as PermIdentityIcon} from "@material-ui/icons/index";
 import ProfileMenu from "./ProfileMenu";
 
@@ -10,10 +10,7 @@ export default class ProfileButton extends Component {
         this.handleClose = this.handleClose.bind(this);
     }
 
-    handleClose(event) {
-        if (this.anchorRef.current && this.anchorRef.current.contains(event.target)) {
-            return null;
-        }
+    handleClose() {
         this.props.handleClose();
     }
 
@@ -41,9 +38,7 @@ export default class ProfileButton extends Component {
                         >
                             <Paper id="menu-list-grow">
                                 <ClickAwayListener onClickAway={this.handleClose}>
-                                    <ProfileMenu
-                                        handleClose={this.handleClose}
-                                    />
+                                    <ProfileMenu handleClose={this.handleClose}/>
                                 </ClickAwayListener>
                             </Paper>
                         </Grow>

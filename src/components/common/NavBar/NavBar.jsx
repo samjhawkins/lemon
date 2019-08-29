@@ -17,7 +17,8 @@ const styles = theme => ({
         margin: 10,
         width: 60,
         height: 60,
-    }
+
+    },
 });
 
 export class NavBar extends Component {
@@ -58,6 +59,7 @@ export class NavBar extends Component {
                                     style={{alignSelf: "center"}}
                                 >
                                     Lemon
+                                    <hr/>
                                 </Typography>
                             </Grid>
                             <Grid item container xs={12} sm={1} justify={"center"}>
