@@ -6,10 +6,12 @@ import {makeStyles} from '@material-ui/styles';
 const useStyles = makeStyles(theme => ({
     root: {
         width: '100%',
-        margin: theme.spacing(4)
+        minWidth: theme.spacing(60),
+        margin: theme.spacing(4),
     },
     item: {
         backgroundColor: theme.color.white,
+        justifyContent: 'center',
     },
 }));
 
@@ -18,20 +20,20 @@ export const ProfileMenu = (props, ref) => {
     return (
         <Paper ref={ref} className={classes.root}>
             <MenuList>
-                <MenuItem onClick={props.handleClose} className={classes.item}>
-                    <UndecoratedLink to={"/myAccount"}>
+                <UndecoratedLink to={"/myAccount"}>
+                    <MenuItem onClick={props.handleClose} className={classes.item}>
                         <Typography color={"primary"}>
                             My Account
                         </Typography>
-                    </UndecoratedLink>
-                </MenuItem>
-                <MenuItem onClick={props.handleClose} className={classes.item}>
-                    <UndecoratedLink to={"/signOut"}>
+                    </MenuItem>
+                </UndecoratedLink>
+                <UndecoratedLink to={"/signOut"}>
+                    <MenuItem onClick={props.handleClose} className={classes.item}>
                         <Typography color={"secondary"}>
                             Sign Out
                         </Typography>
-                    </UndecoratedLink>
-                </MenuItem>
+                    </MenuItem>
+                </UndecoratedLink>
             </MenuList>
         </Paper>
     );

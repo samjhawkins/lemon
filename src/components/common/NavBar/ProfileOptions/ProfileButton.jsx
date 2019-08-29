@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, ClickAwayListener, Grow, Paper, Popper} from "@material-ui/core/index";
+import {Button, ClickAwayListener, Grow, Popper} from "@material-ui/core/index";
 import {PermIdentity as PermIdentityIcon} from "@material-ui/icons/index";
 import ProfileMenu from "./ProfileMenu";
 
@@ -36,11 +36,11 @@ export default class ProfileButton extends Component {
                             {...TransitionProps}
                             style={{transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom'}}
                         >
-                            <Paper id="menu-list-grow">
+                            <div>
                                 <ClickAwayListener onClickAway={this.handleClose}>
                                     <ProfileMenu handleClose={this.handleClose}/>
                                 </ClickAwayListener>
-                            </Paper>
+                            </div>
                         </Grow>
                     )}
                 </Popper>

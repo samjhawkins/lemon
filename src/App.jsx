@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Switch} from 'react-router-dom';
 import NavBar from './components/common/NavBar/NavBar';
-import {Grid} from '@material-ui/core/index';
+import {Grid, TableCell} from '@material-ui/core/index';
 import renderRoutes from './routes/renderRoutes'
 
-export default class App extends Component {
+export class App extends Component {
     render() {
         const auth = false;
         return (
@@ -16,9 +16,7 @@ export default class App extends Component {
                     alignItems="center"
                     spacing={8}
                 >
-                    <Grid item xs={12}>
-                        <NavBar/>
-                    </Grid>
+                    <NavBar/>
                     <Grid item xs={12}>
                         <Switch>
                             {renderRoutes(auth)}
@@ -29,3 +27,5 @@ export default class App extends Component {
         )
     }
 }
+
+export default App;

@@ -13,11 +13,16 @@ import {withStyles} from "@material-ui/core/styles";
 import logo from "../../../images/logo.png";
 
 const styles = theme => ({
+    toolbar: {
+        marginTop: theme.spacing(8),
+        marginRight: theme.spacing(15),
+        marginBottom: theme.spacing(8),
+        marginLeft: theme.spacing(15),
+    },
     avatar: {
         margin: 10,
         width: 60,
         height: 60,
-
     },
 });
 
@@ -43,8 +48,8 @@ export class NavBar extends Component {
     render() {
         const {classes} = this.props;
         return (
-            <AppBar position='fixed'>
-                <Toolbar>
+            <AppBar position='sticky' >
+                <Toolbar className={classes.toolbar}>
                     <Container maxWidth="md">
                         <Grid justify={"space-between"} container>
                             <Grid item container sm={4} alignContent={"center"} justify={"center"}>
@@ -62,7 +67,7 @@ export class NavBar extends Component {
                                     <hr/>
                                 </Typography>
                             </Grid>
-                            <Grid item container xs={12} sm={1} justify={"center"}>
+                            <Grid item container xs={12} sm={4} justify={"center"}>
                                 <ProfileOptions
                                     open={this.state.open}
                                     auth={this.state.auth}
