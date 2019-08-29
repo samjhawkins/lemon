@@ -5,9 +5,10 @@ import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        width: '100%',
+        width: '90%',
         minWidth: theme.spacing(60),
-        margin: theme.spacing(4),
+        margin: theme.spacing(6),
+        marginTop: 0,
     },
     item: {
         backgroundColor: theme.color.white,

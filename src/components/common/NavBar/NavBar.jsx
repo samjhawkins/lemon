@@ -5,7 +5,6 @@ import {
     Typography,
     Avatar,
     Container,
-    Hidden
 } from '@material-ui/core/index';
 import ProfileOptions from "./ProfileOptions/ProfileOptions";
 import Grid from "@material-ui/core/Grid/index";
@@ -13,17 +12,14 @@ import {withStyles} from "@material-ui/core/styles";
 import logo from "../../../images/logo.png";
 
 const styles = theme => ({
-    toolbar: {
-        marginTop: theme.spacing(8),
-        marginRight: theme.spacing(15),
-        marginBottom: theme.spacing(8),
-        marginLeft: theme.spacing(15),
-    },
     avatar: {
-        margin: 10,
-        width: 60,
-        height: 60,
+        margin: theme.spacing(5),
+        width: theme.spacing(30),
+        height: theme.spacing(30),
     },
+    padIt: {
+        padding: theme.spacing(10)
+    }
 });
 
 export class NavBar extends Component {
@@ -49,7 +45,7 @@ export class NavBar extends Component {
         const {classes} = this.props;
         return (
             <AppBar position='sticky' >
-                <Toolbar className={classes.toolbar}>
+                <Toolbar>
                     <Container maxWidth="md">
                         <Grid justify={"space-between"} container>
                             <Grid item container sm={4} alignContent={"center"} justify={"center"}>
@@ -59,15 +55,14 @@ export class NavBar extends Component {
                                     className={classes.avatar}
                                 />
                                 <Typography
-                                    variant='h6'
+                                    variant='h5'
                                     display={'inline'}
                                     style={{alignSelf: "center"}}
                                 >
-                                    Lemon
-                                    <hr/>
+                                    Lemon&nbsp;&nbsp;
                                 </Typography>
                             </Grid>
-                            <Grid item container xs={12} sm={4} justify={"center"}>
+                            <Grid item container xs={12} sm={4} justify={"center"} className={classes.padIt}>
                                 <ProfileOptions
                                     open={this.state.open}
                                     auth={this.state.auth}

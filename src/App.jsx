@@ -14,7 +14,6 @@ export class App extends Component {
                     direction="column"
                     justify="center"
                     alignItems="center"
-                    spacing={8}
                 >
                     <NavBar/>
                     <Grid item xs={12}>
