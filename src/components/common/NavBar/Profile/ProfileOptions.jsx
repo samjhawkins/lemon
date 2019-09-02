@@ -1,7 +1,9 @@
 import React from 'react';
 import {Button, useMediaQuery} from "@material-ui/core/index";
-import ProfileButton from "./ProfileButton";
+import PopperMenu from "../Menu/PopperMenu";
+import ButtonMenu from "../Menu/ButtonMenu";
 import useTheme from "@material-ui/core/styles/useTheme";
+import {PermIdentity as PermIdentityIcon} from "@material-ui/icons/index";
 import ProfileMenu from "./ProfileMenu";
 
 export const ProfileOptions = props => {
@@ -10,13 +12,19 @@ export const ProfileOptions = props => {
     if (props.auth) {
         if(matches){
             return (
-                <ProfileMenu
+                <ButtonMenu
+                    menuComponent={ProfileMenu}
+                    name={"Account Details"}
+                    open={props.open}
                     handleClose={props.handleClose}
+                    handleToggle={props.handleToggle}
                 />
             );
         }
         return (
-            <ProfileButton
+            <PopperMenu
+                buttonIcon={PermIdentityIcon}
+                menuComponent={ProfileMenu}
                 open={props.open}
                 handleClose={props.handleClose}
                 handleToggle={props.handleToggle}

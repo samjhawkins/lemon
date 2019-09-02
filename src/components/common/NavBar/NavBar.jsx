@@ -6,7 +6,7 @@ import {
     Avatar,
     Container,
 } from '@material-ui/core/index';
-import ProfileOptions from "./ProfileOptions/ProfileOptions";
+import ProfileOptions from "./Profile/ProfileOptions";
 import Grid from "@material-ui/core/Grid/index";
 import {withStyles} from "@material-ui/core/styles";
 import logo from "../../../images/logo.png";
