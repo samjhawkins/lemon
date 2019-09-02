@@ -1,14 +1,14 @@
 import React from 'react';
 import {
-    Box,
+    Paper,
     Typography
 } from "@material-ui/core/index";
-import LinkedButton from "../common/LinkedButton/LinkedButton";
+import LinkedButton from "../common/Links/LinkedButton";
 
 export default class WelcomeCard extends React.Component {
     render() {
         return (
-            <Box style={{marginTop: "10px"}}>
+            <Paper style={{marginTop: "20px", padding: "20px"}}>
                 <Typography variant="h1" gutterBottom>
                     Welcome!
                 </Typography>
@@ -27,7 +27,7 @@ export default class WelcomeCard extends React.Component {
                     size={"large"}
                     text={"Explore Site"}
                 />
-            </Box>
+            </Paper>
         );
     }
 }

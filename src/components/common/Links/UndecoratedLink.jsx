@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import {makeStyles} from "@material-ui/styles";
+import {makeStyles} from "@material-ui/styles/index";
 
 const useStyles = makeStyles(theme => ({
         link: {

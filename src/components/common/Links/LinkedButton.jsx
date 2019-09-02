@@ -1,6 +1,6 @@
 import React from 'react';
-import {Button} from "@material-ui/core";
-import UndecoratedLink from "../UndecoratedLink/UndecoratedLink";
+import {Button} from "@material-ui/core/index";
+import UndecoratedLink from "./UndecoratedLink";
 
 const LinkedButton = ({to, text, size, colour}) => {
     return (

@@ -9,15 +9,7 @@ import SignOut from "../components/Account/SignOut/SignOut";
 import PageNotFound from "../components/PageNotFound";
 
 export const authRoutesConfig = [{
-    path: "/signIn",
-    exact: true,
-    component: SignIn
-}, {
-    path: "/register",
-    exact: true,
-    component: Register
-}, {
-    path: "/",
+    path: "/(home)?",
     exact: true,
     component: Home
 }, {
@@ -33,6 +25,10 @@ export const authRoutesConfig = [{
     exact: true,
     component: SignOut
 }, {
+    path: "/passwordReset",
+    exact: true,
+    component: PasswordReset
+}, {
     render: PageNotFound
 }];
 
@@ -40,10 +36,6 @@ export const unAuthRoutesConfig = [{
     path: "/register",
     exact: true,
     component: Register
-}, {
-    path: "/passwordReset",
-    exact: true,
-    component: PasswordReset
 }, {
     path: "/(signIn)?",
     exact: true,

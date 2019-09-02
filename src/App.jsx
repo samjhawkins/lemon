@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Switch} from 'react-router-dom';
 import NavBar from './components/common/NavBar/NavBar';
-import {Grid, TableCell} from '@material-ui/core/index';
+import {Grid} from '@material-ui/core/index';
 import renderRoutes from './routes/renderRoutes'
 
 export class App extends Component {
     render() {
-        const auth = false;
+        const auth = true;
         return (
             <Router>
                 <Grid

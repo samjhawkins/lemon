@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {
     Link,
     Grid,
@@ -12,6 +12,7 @@ import {
 } from '@material-ui/core';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import {makeStyles} from '@material-ui/core/styles';
+import UndecoratedLink from '../../common/Links/UndecoratedLink';
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -87,14 +88,14 @@ const SignIn = props => {
                     </Button>
                     <Grid container>
                         <Grid item xs>
-                            <Link href="/passwordReset" variant="body2">
+                            <UndecoratedLink to="/passwordReset">
                                 Forgot password?
-                            </Link>
+                            </UndecoratedLink>
                         </Grid>
                         <Grid item>
-                            <Link href="/register" variant="body2">
+                            <UndecoratedLink to="/register">
                                 New to Lemon? Sign up
-                            </Link>
+                            </UndecoratedLink>
                         </Grid>
                     </Grid>
                 </form>

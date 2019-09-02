@@ -10,7 +10,7 @@ export const ButtonMenu = props => {
                 onClick={props.handleToggle}
                 variant="contained"
             >
-                Toggle {props.name}
+                {props.name}
                 {props.open ? <ArrowDropUpSharp/> : <ArrowDropDownSharp/> }
             </Button>
             <Collapse in={props.open}>

@@ -1,6 +1,6 @@
 import React from 'react';
 import {MenuList, MenuItem, Typography} from "@material-ui/core";
-import UndecoratedLink from "../../UndecoratedLink/UndecoratedLink";
+import UndecoratedLink from "../../Links/UndecoratedLink";
 import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => ({
