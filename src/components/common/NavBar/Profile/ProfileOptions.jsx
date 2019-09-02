@@ -9,22 +9,11 @@ import ProfileMenu from "./ProfileMenu";
 export const ProfileOptions = props => {
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.down('xs'));
-    if (props.auth) {
-        if(matches){
-            return (
-                <ButtonMenu
-                    menuComponent={ProfileMenu}
-                    name={"Account Details"}
-                    open={props.open}
-                    handleClose={props.handleClose}
-                    handleToggle={props.handleToggle}
-                />
-            );
-        }
+    if (matches) {
         return (
-            <PopperMenu
-                buttonIcon={PermIdentityIcon}
+            <ButtonMenu
                 menuComponent={ProfileMenu}
+                name={"Account Details"}
                 open={props.open}
                 handleClose={props.handleClose}
                 handleToggle={props.handleToggle}
@@ -32,9 +21,13 @@ export const ProfileOptions = props => {
         );
     }
     return (
-        <Button variant="contained" href='/'>
-            Login
-        </Button>
+        <PopperMenu
+            buttonIcon={PermIdentityIcon}
+            menuComponent={ProfileMenu}
+            open={props.open}
+            handleClose={props.handleClose}
+            handleToggle={props.handleToggle}
+        />
     );
 };
 

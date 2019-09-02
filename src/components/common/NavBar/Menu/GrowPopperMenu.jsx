@@ -19,13 +19,13 @@ export const GrowPopperMenu = (props, ref) => {
             {...props.TransitionProps}
             style={{transformOrigin: props.placement === 'bottom' ? 'center top' : 'center bottom'}}
         >
-            <>
+            <React.Fragment>
                 <ClickAwayListener onClickAway={props.handleClose}>
                     <Paper ref={ref} className={classes.paper}>
                         <InputMenu handleClose={props.handleClose}/>
                     </Paper>
                 </ClickAwayListener>
-            </>
+            </React.Fragment>
         </Grow>
     );
 };
