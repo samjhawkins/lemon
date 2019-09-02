@@ -32,11 +32,35 @@
             justify-content: center;
             align-items: center;
         }
+
+        #spinner {
+            margin-left: 10px;
+            border-radius: 50%;
+            border: lightgray solid 8px;
+            border-top: rgb(80,80,80) solid 8px;
+            background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+            width: 30px;
+            height: 30px;
+            animation: rotate 2s linear infinite;
+            position: relative;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 <body>
 <div id="app">
    <h2 id="waitText">Site is loading, please wait...</h2>
+    <span id="spinner"></span>
 </div>
 </body>
 </html>
