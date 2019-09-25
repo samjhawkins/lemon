@@ -6,7 +6,7 @@ import renderRoutes from './routes/renderRoutes'
 
 export class App extends Component {
     render() {
-        const auth = true;
+        const auth = false;
         return (
             <Router>
                 <Grid
