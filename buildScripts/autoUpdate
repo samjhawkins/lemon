@@ -1,1 +1,5 @@
 
+pm2 stop index
+git pull
+npm i
+pm2 start index
