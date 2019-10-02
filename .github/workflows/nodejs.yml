@@ -13,12 +13,7 @@ jobs:
     strategy:
       matrix:
         node-version: [8.x, 10.x, 12.x]
-    rules:
-      - and
-      - - github.event.action
-        - 'closed'
-        - pull_request.merged
-        - true
+
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js ${{ matrix.node-version }}
