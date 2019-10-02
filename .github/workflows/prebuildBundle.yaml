@@ -1,23 +1,22 @@
-#name: prebuild_checks
-#on:
-#  pull_request:
-#    branches:
-#      - master
-#jobs:
-#  prebuild_bundle:
-#    name: prebuild the bundle
-#    runs-on: ubuntu-latest
-#    steps:
-#      rule:
-#        - and
-#        -
-#          - github.event.action
-#          - 'closed'
-#          - pull_request.merged
-#          - 'true'
-#      - uses: actions/checkout@master
-#      - uses: actions/setup-node@master
-#        with:
-#          node-version: 10.x
-#      - run: npm install
-#      - run: npm run build
+name: prebuild_checks
+on:
+  jhaskj
+
+jobs:
+  prebuild_bundle:
+    name: prebuild the bundle
+    runs-on: ubuntu-latest
+    steps:
+      rule:
+        - and
+        -
+          - github.event.action
+          - 'closed'
+          - pull_request.merged
+          - 'true'
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: 10.x
+      - run: npm install
+      - run: npm run build
