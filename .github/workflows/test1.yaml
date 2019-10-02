@@ -15,7 +15,7 @@ jobs:
           git config user.name "samjhawkins"
           git add .
           git commit -m "hello world commit"
-          git remote set-url origin https://samjhawkins:26e100306cfb4a2d5a5d30978d88381446682aab@github.com/samjhawkins/lemon.git
+          git remote set-url origin https://samjhawkins:${{secrets.ACCESS_TOKEN}}@github.com/samjhawkins/lemon.git
           git remote -v
           git push origin HEAD:develop --force
 
