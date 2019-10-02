@@ -21,7 +21,7 @@ jobs:
         - github.event.action
         - 'closed'
         - pull_request.merged
-        - 'true'
+        - true
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
