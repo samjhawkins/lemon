@@ -1,0 +1,37 @@
+name: promote build
+
+on: 
+  pull_request:
+    branches: 
+      - master
+    
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install, build, and test
+      run: |
+        git checkout -b master-deployment
+        npm install
+        npm run build --if-present
+        git remote add destination https://github.com/samjhawkins/lemon-prod.git
+        git add ./dist -f
+        git commit -m "master - production build deployment"
+        git checkout destination/master
+        git fetch destination master
+        git cherry-pick master-deployment
+        git push
+      env:
+        CI: true
