@@ -2,9 +2,11 @@ name: promote build
 
 on: 
   pull_request:
+    types:
+      -closed
     branches: 
       - master
-    
+
 
 jobs:
   build:
