@@ -3,7 +3,7 @@ name: promote build
 on: 
   pull_request:
     types:
-      -closed
+      - closed
     branches: 
       - master
 
